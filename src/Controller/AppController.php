@@ -27,4 +27,14 @@ class AppController extends AbstractController
             'projectRepo' => $projectRepo,
         ]);
     }
+
+    #[Route('/show{id}', name: 'show')]
+    public function show($id, ProjectRepository $projectRepository): Response
+    {
+        $project = $projectRepository->find($id);
+
+        return $this->render('app/showproject.html.twig', [
+            'project' => $project,
+        ]);
+    }
 }

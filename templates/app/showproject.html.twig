@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Portfolio{% endblock %}
+{% block title %}Show project{% endblock %}
 
 {% block body %}
     <style>
@@ -9,16 +9,10 @@
     </style>
 
     <div class="example-wrapper">
-        <h1>Portfolio</h1>
-
-        {% for project in projectRepo %}
-            <div>
-                <a href="{{ path('show', {'id': project.id}) }}">
-                    <p>{{ project.name }}</p>
-                </a>
-            </div>
-
-        {% endfor %}
-
+        <h1>Project</h1>
+        <div>
+            <p>{{ project.id }}</p>
+            <p>{{ project.name }}</p>
+        </div>
     </div>
 {% endblock %}
