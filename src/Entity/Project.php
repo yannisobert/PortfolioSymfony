@@ -31,6 +31,9 @@ class Project
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $git;
 
+    #[ORM\ManyToOne(targetEntity: Langage::class, inversedBy: 'projects')]
+    private $langage;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +107,18 @@ class Project
     public function setGit(?string $git): self
     {
         $this->git = $git;
+
+        return $this;
+    }
+
+    public function getLangage(): ?Langage
+    {
+        return $this->langage;
+    }
+
+    public function setLangage(?Langage $langage): self
+    {
+        $this->langage = $langage;
 
         return $this;
     }
