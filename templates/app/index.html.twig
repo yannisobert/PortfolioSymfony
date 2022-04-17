@@ -370,10 +370,10 @@
 
                 {% for project in projectRepo %}
                     <div class="col-lg-4 work_item webdesign wordpress seo">
-                        <a href="assets/images/works/1.jpg" class="img-zoom">
+                        <a href="{{ asset('uploads/image/') }}{{ project.image }}" class="img-zoom">
                             <div class="work_box">
                                 <div class="work_img bg-light">
-                                    <img src="assets/images/works/1.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
+                                    <img src="{{ asset('uploads/image/') }}{{ project.image }}" class="img-fluid mx-auto d-block rounded" alt="work-img">
                                     <p class="mb-0 text-white text-muted">{{ project.text }}</p>
                                 </div>
                                 <div class="work_detail">
