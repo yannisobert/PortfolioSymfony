@@ -24,8 +24,8 @@ class ProjectCrudController extends AbstractCrudController
             IdField::new('id')->setDisabled(),
             TextField::new('title'),
             TextField::new('name'),
-            TextEditorField::new('text'),
-            TextEditorField::new('git'),
+            TextField::new('text'),
+            TextField::new('git'),
             ImageField::new('image')
                 ->setUploadDir('public/uploads/image')
                 ->setBasePath('uploads/product')
